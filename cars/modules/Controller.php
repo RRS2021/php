@@ -15,11 +15,10 @@ class Controller {
 	{
 		$cars = $this->model->getCars();
 		
-		$params = array(
-			"cars" => $cars,
-		);
+		$danni = array( "cars" => $cars );
+		$template = "index";
 		
-		$this->view->render( "index", $params );
+		$this->view->render( $template, $danni );
 	}
 
 	function profile()
